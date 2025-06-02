@@ -18,12 +18,12 @@ sintoma(gripe, estornudos).
 sintoma(gripe, nauseas). % Más común en niños
 sintoma(gripe, vomitos). % Más común en niños
 
-% Hechos: Medicamentos para la gripe
+% Medicamentos para la gripe
 medicamento(gripe, ibuprofeno).
 medicamento(gripe, paracetamol).
 medicamento(gripe, antigripal).
 
-% Hechos: Tratamiento (acción de recetar)
+% Tratamiento (acción de recetar)
 tratamiento(gripe, recetar).
 
 % Reglas y consultas
