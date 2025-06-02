@@ -5,7 +5,7 @@
 %...receta
 % nombres:
 
-%Síntomas de la gripe (ampliados)
+%SÃ­ntomas de la gripe 
 sintoma(gripe, fiebre).
 sintoma(gripe, escalofrios).
 sintoma(gripe, tos).
@@ -15,38 +15,38 @@ sintoma(gripe, dolores_musculares).
 sintoma(gripe, dolor_de_garganta).
 sintoma(gripe, congestion_nasal).
 sintoma(gripe, estornudos).
-sintoma(gripe, nauseas). % Más común en niños
-sintoma(gripe, vomitos). % Más común en niños
+sintoma(gripe, nauseas). % MÃ¡s comÃºn en niÃ±os
+sintoma(gripe, vomitos). % MÃ¡s comÃºn en niÃ±os
 
 % Hechos: Medicamentos para la gripe
 medicamento(gripe, ibuprofeno).
 medicamento(gripe, paracetamol).
 medicamento(gripe, antigripal).
 
-% Hechos: Tratamiento (acción de recetar)
+% Hechos: Tratamiento (acciÃ³n de recetar)
 tratamiento(gripe, recetar).
 
 % Reglas y consultas
 
-% Consulta 1: ¿Es X un síntoma de la gripe?
+% Consulta 1: Â¿Es X un sÃ­ntoma de la gripe?
 es_sintoma_de_la_gripe(Sintoma) :-
     sintoma(gripe, Sintoma),
-    write(Sintoma), write(' es un síntoma de la gripe.'), nl.
+    write(Sintoma), write(' es un sÃ­ntoma de la gripe.'), nl.
 
-% Consulta 2: ¿Cuáles son los síntomas de la gripe?
+% Consulta 2: Â¿CuÃ¡les son los sÃ­ntomas de la gripe?
 cuales_son_los_sintomas_de_la_gripe :-
-    write('Los síntomas de la gripe son:'), nl,
+    write('Los sÃ­ntomas de la gripe son:'), nl,
     sintoma(gripe, Sintoma),
     write('- '), write(Sintoma), nl,
     fail.
 cuales_son_los_sintomas_de_la_gripe.
 
-% Consulta 3: ¿Paracetamol es medicina de qué?
+% Consulta 3: Â¿Paracetamol es medicina de quÃ©?
 es_medicina_de_que(Medicamento) :-
     medicamento(Enfermedad, Medicamento),
     write(Medicamento), write(' es un medicamento para la '), write(Enfermedad), write('.'), nl.
 
-% Consulta 4: ¿Qué medicamentos existen para la gripe?
+% Consulta 4: Â¿QuÃ© medicamentos existen para la gripe?
 que_medicamentos_existen_para_la_gripe :-
     write('Los medicamentos para la gripe son:'), nl,
     medicamento(gripe, Medicamento),
